@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/all.min.css">
+    <link rel="stylesheet" href="./Css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+<div class="container-fluid container-style">
+    <div class="caption ">     
+        <div class="caption-header  pt-5">
+            <h1 class="text-center head-style">Bookmarker</h1>
+        </div>
+   
+    </div>
+
+    <div class="content w-75 m-auto ">
+        <h3 ><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h3>
+        
+        <div>
+            <h5> <i class="fa-solid fa-book-bookmark"></i> <label for="siteName">Site Name</label></h5>
+            <input oninput="nameValidtion()" type="text" id="siteName" class="form-control mt-2" placeholder="Bookmark Name">
+        </div>
+
+        <div class="mt-4">
+           <h5> <i class="fa-solid fa-link"></i> <label for="siteUrl">Site URL</label></h5>
+            <input oninput="urlValidtion()" type="text" id="siteUrl" class="form-control mt-2" placeholder="Website URL">
+        </div>
+        <div id="urlMessage" class="alert alert-danger d-none">
+            Please Enter valid url ex abcd.com
+        </div>
+        
+        <button onclick="addSite()"  class="btn btn-danger mt-3 px-4">Submit</button>
+    </div>
+
+    <table class="table text-center mt-4 w-75 mx-auto "> 
+        <thead >
+            <tr>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="displaySite">
+            
+        </tbody>
+    </table>
+
+    
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
